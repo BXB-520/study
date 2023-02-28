@@ -21,12 +21,14 @@ const AppGesture = ({ gestureprops }: any) => {
 
   useEffect(() => {
     // 初始化APP，修改状态栏颜色
+
     const onDeviceReady = () => {
       console.log('加载ok');
       //if (isCordova() && isAndroid()) {
       //   // 状态栏颜色
       //   if (!isWork()) {
-      //     StatusBar.backgroundColorByHexString(props.statusBarColor);
+      StatusBar.backgroundColorByHexString('#5481F8');
+      StatusBar.styleLightContent();
       //     checkPermission();
       //   }
       //   // 返回按钮
@@ -40,7 +42,7 @@ const AppGesture = ({ gestureprops }: any) => {
     };
 
     // 待设备初始化完成，才能使用cordova插件
-    document.addEventListener('deviceready', onDeviceReady);
+    document.addEventListener('deviceready', onDeviceReady, false);
   }, []);
 
   const eventBackButton = async () => {
@@ -70,6 +72,8 @@ const AppGesture = ({ gestureprops }: any) => {
 
     if (historys.length > 1) {
       if (ref.current?.iosBackRef) {
+        console.log('使用子页面返回');
+
         ref.current?.iosBackRef();
       } else {
         history.goBack();

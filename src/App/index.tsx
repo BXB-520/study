@@ -9,7 +9,7 @@ const App = (props: any) => {
   
 
   useEffect(() => {
-    // new VConsole();
+     new VConsole();
   }, []);
 
   <Redirect to="/tabs" />
