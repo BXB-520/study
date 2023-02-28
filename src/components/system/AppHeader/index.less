@@ -1,0 +1,14 @@
+@import '../../../common.less';
+
+/** ios顶部底部偏移量 自动适配 */
+.topSafeArea {
+  color: #fff;
+  background: @theme-color;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  :global {
+    .adm-nav-bar {
+      height: 42px;
+    }
+  }
+}

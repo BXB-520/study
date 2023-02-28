@@ -1,0 +1,122 @@
+@import '../../../common.less';
+
+.hidden {
+  display: none;
+}
+
+.open {
+  .now {
+    animation: openAnimation @animation-time+60ms 1;
+    animation-timing-function: easy;
+  }
+  .old {
+    animation: openOldAnimation @animation-time+60ms 1;
+    animation-timing-function: easy;
+  }
+}
+
+.end {
+  .now {
+    animation: endAnimation @animation-time 1;
+    animation-timing-function: easy;
+  }
+  .old {
+    animation: endOldAnimation @animation-time 1;
+    animation-timing-function: easy;
+  }
+}
+
+.next {
+  .now {
+    animation: nextAnimation @animation-time 1;
+    animation-timing-function: easy;
+  }
+  .old {
+    animation: nextOldAnimation @animation-time 1;
+    animation-timing-function: easy;
+  }
+}
+
+.back {
+  .now {
+    animation: backAnimation @animation-time 1;
+    animation-timing-function: easy;
+  }
+  .old {
+    animation: backOldAnimation @animation-time 1;
+    animation-timing-function: easy;
+  }
+}
+
+@keyframes openAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes openOldAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes endAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes endOldAnimation {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/**  */
+@keyframes nextAnimation {
+  // from {
+  //   transform: translateX(100%);
+  // }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes nextOldAnimation {
+  // from {
+  //   transform: translateX(0%);
+  // }
+  to {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes backAnimation {
+  // from {
+  //   transform: translateX(0%);
+  // }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes backOldAnimation {
+  // from {
+  //   transform: translateX(-30%);
+  // }
+  to {
+    transform: translateX(0%);
+  }
+}

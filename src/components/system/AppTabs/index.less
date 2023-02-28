@@ -1,0 +1,110 @@
+.tabsInner {
+  position: relative;
+  flex: 1 1 0%;
+  contain: size layout style;
+}
+
+.appTabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  contain: size layout style;
+}
+
+.theme1 {
+  border-top: solid 1px var(--adm-border-color);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 20px); /*兼容 IOS>11.2*/
+  background-color: #fff;
+
+  .tabscontent {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .tabsalone {
+      width: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .tabsbadge {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -8px;
+        background-color: #ff411c;
+        color: #fff;
+        border-radius: 100px;
+        box-sizing: border-box;
+        min-width: 8px;
+        padding: 1px 4px 1px 4px;
+        font-size: 12px;
+        line-height: 12px;
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: center;
+      }
+      img {
+        width: 22px;
+        height: 22px;
+      }
+      .tabstitle {
+        color: #808080;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.theme2 {
+  position: absolute;
+  bottom: 0px;
+  background: #000000ab;
+  //background: #ffffffcc;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 20px); /*兼容 IOS>11.2*/
+  border-radius: 50px;
+  width: 96%;
+  margin-left: 2%;
+  box-shadow: 2px 2px 35px #d6e1f3;
+  .tabscontent {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .tabsalone {
+      width: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .tabsbadge {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -8px;
+        background-color: #ff411c;
+        color: #fff;
+        border-radius: 100px;
+        box-sizing: border-box;
+        min-width: 8px;
+        padding: 1px 4px 1px 4px;
+        font-size: 12px;
+        line-height: 12px;
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: center;
+      }
+      img {
+        width: 22px;
+        height: 22px;
+      }
+      .tabstitle {
+        display: none;
+      }
+    }
+  }
+}
